@@ -1,0 +1,310 @@
+@import '../../assets/stylesheets/utils/grid';
+@import '../../assets/stylesheets/utils/colors';
+@import '../../assets/stylesheets/utils/typography';
+
+.page {
+  background-color: $spring-wood;
+  max-width: 100%;
+}
+
+.pageDetail {
+  composes: page;
+
+  padding-top: 20px;
+  overflow: hidden;
+
+  @include minWidth(tablet) {
+    padding-top: 30px;
+  }
+}
+
+.pageDark {
+  composes: page;
+
+  background-color: $mineShaft;
+}
+
+.buffettClipPageHeader {
+  color: $mineShaft;
+  font-family: 'Lyon';
+  font-size: 24px;
+  font-style: italic;
+  letter-spacing: 0.26px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 10px;
+
+  @include minWidth(tablet) {
+    font-size: 40px;
+    letter-spacing: 0.4px;
+    margin-bottom: 20px;
+  }
+
+  @include minWidth(small-desktop) {
+    font-size: 52px;
+    letter-spacing: 0.52px;
+    margin-bottom: 30px;
+  }
+
+  span {
+    @include fontWeight('Black');
+    color: $tawny-port;
+    font-style: normal;
+  }
+}
+
+.buffettClipPageHeaderDark {
+  composes: buffettClipPageHeader;
+
+  color: $white;
+
+  span {
+    color: $straw;
+  }
+}
+
+.buffettClipPageComponent {
+  background-color: $white;
+  padding: 40px 0 20px;
+  position: relative;
+
+  @include minWidth(small-desktop) {
+    padding: 60px 0 50px;
+  }
+}
+
+.buffettClipPageComponentRecirc {
+  composes: buffettClipPageComponent;
+
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    background-color: $spring-wood;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: 90px;
+    width: 100%;
+    z-index: 1;
+
+    @include minWidth(tablet) {
+      top: 55px;
+      height: 145px;
+    }
+
+    @include minWidth(small-desktop) {
+      top: 85px;
+      height: 198px;
+    }
+
+    @include minWidth(large-desktop) {
+      height: 260px;
+    }
+  }
+}
+
+
+.buffettClipPageComponentChapters {
+  composes: buffettClipPageComponent;
+  
+  padding-top: 15px;
+  margin-bottom: 25px;
+  z-index: 3;
+
+  @include minWidth(tablet) {
+    padding-top: 30px;
+  }
+
+  @include minWidth(small-desktop) {
+    padding-top: 40px;
+  }
+}
+
+.buffettClipPageComponentDark {
+  composes: buffettClipPageComponent;
+  
+  background-color: $less-black;
+}
+
+.buffettClipPageComponentWrapper {
+  @include containerFluidWidths();
+  position: relative;
+  z-index: 2;
+
+  .buffettClipPageComponentDark & {
+    padding-left: 20px;
+    margin-left: 0;
+    overflow: hidden;
+    width: 100%;
+
+    @include minWidth(tablet) {
+      width: calc(100% - 60px);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 30px;
+      padding-right: 10px;
+    }
+
+    @include minWidth(small-desktop) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.buffettClipPagePackage {
+  @include minWidth(small-desktop) {
+    @include offset(1);
+    @include span-columns(7);
+  }
+
+  @include minWidth(large-desktop) {
+    @include offset(1);
+    @include span-columns(10);
+  }
+}
+
+.buffettClipPagePackageBox {
+  @include minWidth(tablet) {
+    margin-left: -20px;
+  }
+
+  @include minWidth(small-desktop) {
+    margin-left: -30px;
+  }
+}
+
+.buffettClipPageAbout {
+  border-top: 1px solid rgba($mineShaft, 0.5);
+  padding-top: 20px;
+  margin-bottom: 30px;
+
+  @include minWidth(small-desktop) {
+    margin-right: $gutter;
+    width: calc((100% / 7) * 4)
+  }
+
+  @include minWidth(large-desktop) {
+    padding-top: 30px;
+    width: 60%;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.42;
+    letter-spacing: 1px;
+    margin: 0;
+
+    @include minWidth(tablet) {
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 1.14px;
+    }
+  }
+}
+
+.buffettClipPageAboutHeader {
+  @include fontWeight('Semibold');
+  color: $mineShaft;
+  font-family: Lyon;
+  font-size: 20px;
+  letter-spacing: 0.31px;
+  margin-bottom: 15px;
+
+  @include minWidth(tablet) {
+    font-size: 22px;
+    line-height: 1;
+    letter-spacing: 0.35px;
+    margin-bottom: 20px;
+  }
+
+  @include minWidth(small-desktop) {
+    font-size: 26px;
+    line-height: 1.5;
+    letter-spacing: 1.14px;
+  }
+
+  @include minWidth(large-desktop) {
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 0.47px;
+  }
+}
+
+.buffettClipPageBlocks {
+  @include minWidth(small-desktop) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.buffettClipPageBlock {
+  @include minWidth(small-desktop) {
+    width: calc(((100% / 7) * 3) - 10px)
+  }
+
+  @include minWidth(large-desktop) {
+    width: calc(40% - 10px);
+  }
+}
+
+.buffettClipPageLayout {
+  margin-right: -20px;
+  margin-bottom: 30px;
+
+  @include minWidth(tablet) {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  @include minWidth(small-desktop) {
+    margin-bottom: 60px;
+  }
+}
+
+.buffettClipPageDetailTitle {
+  color: $mineShaft;
+  font-family: Lyon;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  position: relative;
+
+  @include minWidth(tablet) {
+    margin-bottom: 20px;
+  }
+
+  @include minWidth(tablet) {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  span {
+    background-color: $white;
+    padding: 0 10px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    border: 1px solid $straw;
+    border-bottom: none;
+    top: 50%;
+    left: 0;
+    height: 25px;
+    width: 100%;
+    z-index: -1;
+
+    @include minWidth(tablet) {
+      left: 30px;
+      width: calc(100% - 60px);
+    }
+
+    @include minWidth(tablet) {
+      height: 60px;
+      left: 80px;
+      width: calc(100% - 160px);
+    }
+  }
+}

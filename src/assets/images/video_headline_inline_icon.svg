@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>video icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 15 0 15 15 0 15"></polygon>
+    </defs>
+    <g id="Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1440---Homepage-Design-Variations" transform="translate(-825.000000, -965.000000)">
+            <g id="4-UP" transform="translate(75.000000, 883.000000)">
+                <g id="video-icon" transform="translate(750.000000, 82.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M10.7989911,7.95656561 L6.02017897,10.716139 C5.5848898,10.9676644 5.22869497,10.7620838 5.22869497,10.2595733 L5.22869497,4.74060683 C5.22869497,4.23809638 5.5848898,4.03251574 6.02017897,4.28386105 L10.7988109,7.04343439 C11.2344604,7.29459953 11.2344604,7.7052203 10.7989911,7.95656561 M7.49972975,0 C3.35781635,0 0,3.35793735 0,7.49981982 C0,11.6420627 3.35781635,15 7.49972975,15 C11.6420035,15 15,11.6420627 15,7.49981982 C15,3.35793735 11.6420035,0 7.49972975,0" id="Fill-1" fill="#9E9E9E" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

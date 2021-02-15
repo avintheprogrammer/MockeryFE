@@ -1,0 +1,405 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <header
+    className="articleHeader"
+    id="main-article-header"
+  >
+    <div
+      className="wrapperHeroNoImage"
+    >
+      <h1
+        className="headline"
+      >
+        Japan may pull a Singapore in controlling casino gambling: Analyst
+      </h1>
+      <div
+        className="time"
+      >
+        <time>
+          2017-03-02T06:16:15 GMT
+        </time>
+        <span>
+           
+          <span
+            className="mockeryDivider"
+          >
+            |
+          </span>
+           
+          <time>
+             
+            2018-02-07T03:19:16 GMT
+          </time>
+        </span>
+      </div>
+    </div>
+    <div
+      className="authorAndShare"
+    >
+      <div
+        className="authorContainer"
+      >
+        <div
+          className="author"
+          key="0"
+        >
+          <Author
+            brand="mockery"
+            data={
+              Object {
+                "id": 103944451,
+                "image": Object {
+                  "url": null,
+                },
+                "name": "Bill Smith",
+                "sameAs": null,
+                "socialMediaInfo": Array [
+                  Object {
+                    "displayText": "@billsmith",
+                    "type": "twitter",
+                    "url": "http://twitter.com",
+                  },
+                ],
+                "url": "http://qa-pa13pub.mockery.com/testcreator/",
+              }
+            }
+            dataId={0}
+            hideAuthorImages={false}
+            publisher={
+              Object {
+                "id": "80000008",
+                "logo": "test-file-stub",
+                "name": "Reuters",
+                "url": null,
+              }
+            }
+          />
+        </div>
+      </div>
+      <Share
+        brand=""
+        isDark={false}
+        shareText=""
+        shareType=""
+        title="Japan may pull a Singapore in controlling casino gambling: Analyst"
+        url=""
+      />
+    </div>
+  </header>
+</div>
+`;
+
+exports[`renders make it featuredVideoHeader correctly 1`] = `
+<div>
+  <header
+    className="articleHeader"
+    id="main-article-header"
+  >
+    <LazyLoader
+      height="100%"
+      transitionType="transition-fade"
+    >
+      <div
+        className="imageHero"
+        style={
+          Object {
+            "backgroundImage": "url(test-file-stub?t=1&w=1340&h=500)",
+            "backgroundSize": "100%",
+          }
+        }
+      />
+    </LazyLoader>
+    <div
+      className="heroDescriptionWrapper"
+    >
+      <div
+        className="heroDescription"
+      >
+        <div
+          className="heroDescriptionCaption"
+        />
+        <div
+          className="heroDescriptionCredit"
+        />
+      </div>
+    </div>
+    <div
+      className="wrapperHero"
+    >
+      <h1
+        className="headline"
+      >
+        Why this investment company’s ideal hedge fund managers are ‘younger, hungrier’ and ‘volatile’
+      </h1>
+      <div
+        className="time"
+      >
+        <time>
+          Mon, Aug 7, 2017 | 8:41 AM ET
+        </time>
+        <span>
+           
+          <span
+            className="mockeryDivider"
+          >
+            |
+          </span>
+           
+          <time>
+             
+            Updated 8 Hours Ago
+          </time>
+        </span>
+      </div>
+    </div>
+    <div
+      className="authorAndShare"
+    >
+      <div
+        className="authorContainer"
+      >
+        <div
+          className="author"
+          key="0"
+        >
+          <Author
+            brand="mockery"
+            data={
+              Object {
+                "id": 104799799,
+                "image": "test-file-stubt=1",
+                "name": "Sharon L. Lynch",
+                "sameAs": null,
+                "socialMediaInfo": Array [
+                  Object {
+                    "displayText": "sharonlynch",
+                    "type": "twitter",
+                    "url": "https://twitter.com/sharonlynch",
+                  },
+                ],
+                "url": "http://qa-pa14pub.mockery.com/sharon-l-lynch/",
+              }
+            }
+            dataId={0}
+            hideAuthorImages={false}
+            publisher={null}
+          />
+        </div>
+      </div>
+      <Share
+        brand=""
+        isDark={false}
+        shareText=""
+        shareType=""
+        title="Why this investment company’s ideal hedge fund managers are ‘younger, hungrier’ and ‘volatile’"
+        url=""
+      />
+    </div>
+  </header>
+</div>
+`;
+
+exports[`renders make it header correctly 1`] = `
+<div>
+  <header
+    className="articleHeader"
+    id="main-article-header"
+  >
+    <div
+      className="wrapperHeroNoImage"
+    >
+      <h1
+        className="headline"
+      >
+        Japan may pull a Singapore in controlling casino gambling: Analyst
+      </h1>
+      <div
+        className="time"
+      >
+        <time>
+          2017-03-02T06:16:15 GMT
+        </time>
+        <span>
+           
+          <span
+            className="mockeryDivider"
+          >
+            |
+          </span>
+           
+          <time>
+             
+            2018-02-07T03:19:16 GMT
+          </time>
+        </span>
+      </div>
+    </div>
+    <div
+      className="authorAndShare"
+    >
+      <div
+        className="authorContainer"
+      >
+        <div
+          className="author"
+          key="0"
+        >
+          <Author
+            brand="mockery"
+            data={
+              Object {
+                "id": 103944451,
+                "image": Object {
+                  "url": null,
+                },
+                "name": "Bill Smith",
+                "sameAs": null,
+                "socialMediaInfo": Array [
+                  Object {
+                    "displayText": "@billsmith",
+                    "type": "twitter",
+                    "url": "http://twitter.com",
+                  },
+                ],
+                "url": "http://qa-pa13pub.mockery.com/testcreator/",
+              }
+            }
+            dataId={0}
+            hideAuthorImages={false}
+            publisher={
+              Object {
+                "id": "80000008",
+                "logo": "test-file-stub",
+                "name": "Reuters",
+                "url": null,
+              }
+            }
+          />
+        </div>
+      </div>
+      <Share
+        brand=""
+        isDark={false}
+        shareText=""
+        shareType=""
+        title="Japan may pull a Singapore in controlling casino gambling: Analyst"
+        url=""
+      />
+    </div>
+  </header>
+</div>
+`;
+
+exports[`renders make it imageHeaderHighTouch correctly 1`] = `
+<div>
+  <header
+    className="articleHeader"
+    id="main-article-header"
+  >
+    <LazyLoader
+      height="100%"
+      transitionType="transition-fade"
+    >
+      <div
+        className="imageHero"
+        style={
+          Object {
+            "backgroundImage": "url(test-file-stub?t=1&w=1340&h=500)",
+            "backgroundSize": "100%",
+          }
+        }
+      />
+    </LazyLoader>
+    <div
+      className="heroDescriptionWrapper"
+    >
+      <div
+        className="heroDescription"
+      >
+        <div
+          className="heroDescriptionCaption"
+        />
+        <div
+          className="heroDescriptionCredit"
+        >
+          Photo courtesy of Alina Moore
+        </div>
+      </div>
+    </div>
+    <div
+      className="wrapperHero"
+    >
+      <h1
+        className="headline"
+      >
+        74 percent of millennials would rather text — here is how to overcome your fear of the phone
+      </h1>
+      <div
+        className="time"
+      >
+        <time>
+          Mon, Aug 7, 2017 | 8:41 AM ET
+        </time>
+        <span>
+           
+          <span
+            className="mockeryDivider"
+          >
+            |
+          </span>
+           
+          <time>
+             
+            Updated 8 Hours Ago
+          </time>
+        </span>
+      </div>
+    </div>
+    <div
+      className="authorAndShare"
+    >
+      <div
+        className="authorContainer"
+      >
+        <div
+          className="author"
+          key="0"
+        >
+          <Author
+            brand="mockery"
+            data={
+              Object {
+                "id": 104799799,
+                "image": "test-file-stubt=1",
+                "name": "Sharon L. Lynch",
+                "sameAs": null,
+                "socialMediaInfo": Array [
+                  Object {
+                    "displayText": "sharonlynch",
+                    "type": "twitter",
+                    "url": "https://twitter.com/sharonlynch",
+                  },
+                ],
+                "url": "http://qa-pa14pub.mockery.com/sharon-l-lynch/",
+              }
+            }
+            dataId={0}
+            hideAuthorImages={false}
+            publisher={null}
+          />
+        </div>
+      </div>
+      <Share
+        brand=""
+        isDark={false}
+        shareText=""
+        shareType=""
+        title="74 percent of millennials would rather text — here is how to overcome your fear of the phone"
+        url=""
+      />
+    </div>
+  </header>
+</div>
+`;

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Header renders correctly 1`] = `
+<div
+  id={0}
+>
+  <Connect(ArticleHeader)
+    brand=""
+    data={
+      Object {
+        "article": Object {
+          "featuredMedia": null,
+          "native": false,
+          "section": null,
+          "title": "hello",
+        },
+      }
+    }
+    dataId={0}
+    hasBackground={false}
+    isSpecialReport={false}
+    isTransporter={false}
+  />
+</div>
+`;

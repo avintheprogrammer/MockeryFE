@@ -1,0 +1,440 @@
+//
+// Icon Font Files and Styles declarations:
+// For information on how to make changes to the fonts, read
+// the README.txt file in the src/assets/fonts/icons/ folder.
+//
+$fontFilePath: 'assets/fonts/icons/';
+
+
+//
+//
+// Default MOCKERY.com & Buffett Icons
+//
+//
+@font-face {
+  font-family: 'icomoon';
+  src:  url('#{$fontFilePath}/icomoon.eot?xzw80u');
+  src:  url('#{$fontFilePath}/icomoon.eot?xzw80u#iefix') format('embedded-opentype'),
+    url('#{$fontFilePath}/icomoon.ttf?xzw80u') format('truetype'),
+    url('#{$fontFilePath}/icomoon.woff?xzw80u') format('woff'),
+    url('#{$fontFilePath}/icomoon.svg?xzw80u#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:global .icon-social_apple_news:before {
+  content: "\e900";
+}
+:global .icon-close-2:before {
+  content: "\e901";
+}
+:global .icon-thumbs-up:before {
+  content: "\e902";
+}
+:global .icon-chat-bubble:before {
+  content: "\e903";
+}
+:global .icon-chat-bubble-hover:before {
+  content: "\e904";
+}
+:global .icon-thumbs-down:before {
+  content: "\e905";
+}
+:global .icon-buffett-pause:before {
+  content: "\e906";
+}
+:global .icon-buffett-timeline:before {
+  content: "\e907";
+}
+:global .icon-buffett-backtotop:before {
+  content: "\e908";
+}
+:global .icon-buffett-sync:before {
+  content: "\e909";
+}
+:global .icon-buffett-arrow-right-long:before {
+  content: "\e90a";
+}
+:global .icon-buffett-arrow-left-long:before {
+  content: "\e90b";
+}
+:global .icon-buffett-diamond:before {
+  content: "\e90c";
+}
+:global .icon-check:before {
+  content: "\e90d";
+}
+:global .icon-search:before {
+  content: "\e90e";
+}
+:global .icon-hamburger:before {
+  content: "\e90f";
+}
+:global .icon-close:before {
+  content: "\e910";
+}
+:global .icon-social_facebook:before {
+  content: "\e911";
+}
+:global .icon-social_instagram:before {
+  content: "\e912";
+}
+:global .icon-social_linkedin:before {
+  content: "\e913";
+}
+:global .icon-social_rss:before {
+  content: "\e914";
+}
+:global .icon-social_twitter:before {
+  content: "\e915";
+}
+:global .icon-social_youtube:before {
+  content: "\e916";
+}
+:global .icon-tumblr:before {
+  content: "\e917";
+}
+:global .icon-stumbleupon:before {
+  content: "\e918";
+}
+:global .icon-reddit:before {
+  content: "\e919";
+}
+:global .icon-quote-mark:before {
+  content: "\e91a";
+}
+:global .icon-probug:before {
+  content: "\e91b";
+}
+:global .icon-play-triangle:before {
+  content: "\e91c";
+}
+:global .icon-pinterest:before {
+  content: "\e91d";
+}
+:global .icon-more-dots:before {
+  content: "\e91e";
+}
+:global .icon-play:before {
+  content: "\e91f";
+}
+:global .icon-email:before {
+  content: "\e920";
+}
+:global .icon-digg:before {
+  content: "\e921";
+}
+:global .icon-arrow-left:before {
+  content: "\e922";
+}
+:global .icon-arrow-right:before {
+  content: "\e923";
+}
+:global .icon-arrow-down-readmore:before {
+  content: "\e924";
+}
+:global .icon-arrow-transporter-down:before {
+  content: "\e925";
+}
+:global .icon-calendar:before {
+  content: "\e926";
+}
+:global .icon-livebug:before {
+  content: "\e927";
+}
+:global .icon-lock:before {
+  content: "\e928";
+}
+:global .icon-sort:before {
+  content: "\e929";
+}
+:global .icon-mockerytv:before {
+  content: "\e92a";
+}
+:global .icon-markets:before {
+  content: "\e92b";
+}
+:global .icon-menu:before {
+  content: "\e92c";
+}
+:global .icon-news:before {
+  content: "\e92d";
+}
+:global .icon-offsite-arrow:before {
+  content: "\e92e";
+}
+:global .icon-short-arrow-left:before {
+  content: "\e92f";
+}
+:global .icon-short-arrow-right:before {
+  content: "\e930";
+}
+:global .icon-live:before {
+  content: "\e931";
+}
+:global .icon-newsletter:before {
+  content: "\e932";
+}
+:global .icon-caret-left:before {
+  content: "\e933";
+}
+:global .icon-triangle-down:before {
+  content: "\e934";
+}
+:global .icon-triangle-up:before {
+  content: "\e935";
+}
+:global .icon-caret-right:before {
+  content: "\e936";
+}
+:global .icon-buffett-arrow-left:before {
+  content: "\e937";
+}
+:global .icon-buffett-arrow-right:before {
+  content: "\e938";
+}
+:global .icon-buffett-chevron-down:before {
+  content: "\e939";
+}
+:global .icon-buffett-chevron-left:before {
+  content: "\e93a";
+}
+:global .icon-buffett-chevron-right:before {
+  content: "\e93b";
+}
+:global .icon-buffett-chevron-up:before {
+  content: "\e93c";
+}
+:global .icon-buffett-playlist:before {
+  content: "\e93d";
+}
+:global .icon-buffett-slideshow:before {
+  content: "\e93e";
+}
+:global .icon-buffett-video-fullscreen:before {
+  content: "\e93f";
+}
+:global .icon-buffett-video-mute:before {
+  content: "\e940";
+}
+:global .icon-buffett-video-volume:before {
+  content: "\e941";
+}
+:global .icon-buffett-video:before {
+  content: "\e91C";
+}
+:global .PlayButton-buffett .icon-buffett-video:before,
+:global .UniversalVideoPlayer-videoContainer.buffett .icon-buffett-video:before {
+  content: "\e942";
+}
+:global .icon-video_back_to_top:before {
+  content: "\e943";
+}
+:global .icon-video_close:before {
+  content: "\e944";
+}
+:global .icon-logo-mockery:before {
+  content: "\e945";
+}
+:global .icon-minus:before {
+  content: "\e946";
+}
+:global .icon-plus:before {
+  content: "\e947";
+}
+:global .icon-replay:before {
+  content: "\e965";
+}
+
+
+
+//
+//
+// Make It icons
+//
+//
+@font-face {
+  font-family: 'makeit-icons';
+  src: url('#{$fontFilePath}makeit-icons.eot?h2gve7');
+  src: url('#{$fontFilePath}makeit-icons.woff2') format('embedded-opentype'),
+    url('#{$fontFilePath}makeit-icons.ttf?h2gve7') format('truetype'),
+    url('#{$fontFilePath}makeit-icons.woff?h2gve7') format('woff'),
+    url('#{$fontFilePath}makeit-icons.svg?h2gve7#makeit-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^='icon-makeit-'],
+[class*=' icon-makeit-'] {
+  &:before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'makeit-icons' !important;
+  }
+}
+
+:global .icon-makeit-arrow-down:before {
+  content: "\e900";
+}
+:global .icon-makeit-arrow-left:before {
+  content: "\e901";
+}
+:global .icon-makeit-arrow-right:before {
+  content: "\e902";
+}
+:global .icon-makeit-arrow-up:before {
+  content: "\e903";
+}
+:global .icon-makeit-backtotop:before {
+  content: "\e904";
+}
+:global .icon-makeit-check:before {
+  content: "\e905";
+}
+:global .icon-makeit-close:before {
+  content: "\e906";
+}
+:global .icon-makeit-externallink:before {
+  content: "\e907";
+}
+:global .icon-makeit-filter-closed:before {
+  content: "\e908";
+}
+:global .icon-makeit-filter-open:before {
+  content: "\e909";
+}
+:global .icon-makeit-fullscreen:before {
+  content: "\e90a";
+}
+:global .icon-makeit-hamburger:before {
+  content: "\e90b";
+}
+:global .icon-makeit-logo-mockery:before {
+  content: "\e90c";
+}
+:global .icon-makeit-mail:before {
+  content: "\e90d";
+}
+:global .icon-makeit-mute:before {
+  content: "\e90e";
+}
+:global .icon-makeit-pause:before {
+  content: "\e90f";
+}
+:global .icon-makeit-play:before {
+  content: "\e910";
+}
+:global .icon-makeit-questionnaire:before {
+  content: "\e911";
+}
+:global .icon-makeit-quote:before {
+  content: "\e912";
+}
+:global .icon-makeit-search:before {
+  content: "\e913";
+}
+:global .icon-makeit-trending-bug:before {
+  content: "\e914";
+}
+:global .icon-makeit-unmute:before {
+  content: "\e915";
+}
+:global .icon-makeit-plus:before {
+  content: "\e916";
+}
+:global .icon-makeit-minus:before {
+  content: "\e917";
+}
+
+
+
+
+
+//
+//
+// Social Only Icons (for Gigya Share Bar)
+//
+//
+@font-face {
+  font-family: 'social-icons';
+  src:  url('#{$fontFilePath}social-icons.eot?7b5vsl');
+  src:  url('#{$fontFilePath}social-icons.woff2') format('embedded-opentype'),
+    url('#{$fontFilePath}social-icons.ttf?7b5vsl') format('truetype'),
+    url('#{$fontFilePath}social-icons.woff?7b5vsl') format('woff'),
+    url('#{$fontFilePath}social-icons.svg?7b5vsl#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="gig-button-container-"],
+[class*=" gig-button-container-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'social-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:global .gig-button-container-facebook .icon-social:before {
+  content: "\e911";
+}
+:global .gig-button-container-instagram .icon-social:before  {
+  content: "\e912";
+}
+:global .gig-button-container-linkedin .icon-social:before  {
+  content: "\e913";
+}
+:global .gig-button-container-rss .icon-social:before  {
+  content: "\e914";
+}
+:global .gig-button-container-twitter .icon-social:before  {
+  content: "\e915";
+}
+:global .gig-button-container-youtube .icon-social:before  {
+  content: "\e916";
+}
+:global .gig-button-container-tumblr .icon-social:before  {
+  content: "\e917";
+}
+:global .gig-button-container-stumbleupon .icon-social:before  {
+  content: "\e918";
+}
+:global .gig-button-container-reddit .icon-social:before  {
+  content: "\e919";
+}
+:global .gig-button-container-pinterest .icon-social:before  {
+  content: "\e91d";
+}
+:global .gig-button-container-share .icon-social:before  {
+  content: "\e91e"; // The more '...' button.
+}
+:global .gig-button-container-email .icon-social:before  {
+  content: "\e920";
+}
+:global .gig-button-container-digg .icon-social:before  {
+  content: "\e921";
+}
+:global .gig-button-container-digg .icon-social:before  {
+  content: "\e921";
+}

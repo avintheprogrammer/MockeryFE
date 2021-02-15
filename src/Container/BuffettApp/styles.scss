@@ -1,0 +1,14 @@
+@import '../../assets/stylesheets/global/index';
+@import '../../assets/stylesheets/utils/grid';
+
+.contentWrapper {
+  margin-top: 45px;
+
+  @include minWidth(small-desktop) {
+    margin-top: 70px;
+  }
+}
+
+.contentWrapperClock {
+  margin-top: 110px;
+}

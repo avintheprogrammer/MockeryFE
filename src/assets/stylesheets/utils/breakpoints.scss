@@ -1,0 +1,41 @@
+@import '../global/breakpoints';
+
+@function breakpoint($name) {
+  @return map-get($breakpoints, $name);
+}
+
+@mixin minWidth($breakpoint) {
+  @media (min-width: breakpoint($breakpoint)) {
+    @content;
+  }
+}
+
+@mixin maxWidth($breakpoint) {
+  @media (max-width: breakpoint($breakpoint)) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (min-width: breakpoint(mobile)) and (max-width: (breakpoint(tablet) - 1px)) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (min-width: breakpoint(tablet)) and (max-width: (breakpoint(small-desktop) - 1px)) {
+    @content;
+  }
+}
+
+@mixin small-desktop() {
+  @media (min-width: breakpoint(small-desktop)) and (max-width: (breakpoint(medium-desktop) - 1px)) {
+    @content;
+  }
+}
+
+@mixin medium-desktop() {
+  @media (min-width: breakpoint(medium-desktop)) and (max-width: (breakpoint(large-desktop) - 1px)) {
+    @content;
+  }
+}

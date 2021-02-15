@@ -1,0 +1,464 @@
+@import './breakpoints';
+
+// Setting up our global gutter variables.
+$gutter: 30px;
+$outerGutter: 20px;
+
+$maxGridWidth: 1340px;
+
+// Convert a given number to negative.
+@function negative($number) {
+  @return $number * -1;
+}
+
+// Object containing our container widths across breakpoints.
+$containerWidth: (
+  mobile: 100%,
+  tablet: 678px,
+  small-desktop: 960px,
+  medium-desktop: 1077px,
+  large-desktop: 1290px
+);
+
+// Object containing the number of columns we have per breakpoint.
+$columns: (
+  mobile: 4,
+  tablet: 12,
+  small-desktop: 9,
+  medium-desktop: 9,
+  large-desktop: 12
+);
+
+// Returns a column count for a given breakpoint.
+@function column($breakpoint) {
+  @return map-get($columns, $breakpoint);
+}
+
+// Returns a container width for a given breakpoint.
+@function container-width($breakpoint) {
+  @return map-get($containerWidth, $breakpoint);
+}
+
+// A function that returns us a margin to set on any component that we want to be full width.
+// This allows the component to break out of the grid.
+// This takes in the current breakpoint, and a multiplier in case we want to break out of a subsection of columns.
+@function uncontain-width($breakpoint, $multiplier: -1, $width: 100vw) {
+  @return calc(((#{$width}) - #{container-width($breakpoint)}) / #{(2 * $multiplier)});
+}
+
+// returns value for padding (left/right) of a true-full-width content container
+@function true-full-width-padding($breakpoint) {
+  @return calc(calc(100vw - #{container-width($breakpoint)}) / 2);
+}
+
+// A mixin that sets the container width across all breakpoints.
+@mixin containerWidths {
+  margin: 0 auto;
+  max-width: container-width(mobile);
+
+  @include minWidth(tablet) {
+    max-width: container-width(tablet);
+  }
+
+  @include minWidth(small-desktop) {
+    max-width: container-width(small-desktop);
+  }
+
+  @include minWidth(medium-desktop) {
+    max-width: container-width(medium-desktop);
+  }
+
+  @include minWidth(large-desktop) {
+    max-width: container-width(large-desktop);
+  }
+}
+
+// A mixin that padding / max width for container
+@mixin containerFluidWidths {
+  margin-right: 20px;
+  margin-left: 20px;
+  width: calc(100% - 40px);
+
+  @include minWidth(tablet) {
+    margin-left: 40px;
+    margin-right: 40px;
+    width: calc(100% - 80px);
+  }
+
+  @include minWidth(small-desktop) {
+    margin-left: 30px;
+    margin-right: 30px;
+    width: calc(100% - 60px);
+  }
+
+  @include minWidth(large-desktop) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1290px;
+    width: 100%;
+  }
+}
+
+.containerFluidWidths {
+  @include containerFluidWidths();
+
+  &.dealornodeal {
+    @include maxWidth(tablet) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.containerWidth100 {
+  width: 100%;
+}
+
+// A mixin that provides the ability to offset a component in the grid by a given amount of columns.
+// Takes in the number of columns to offset, as well as the total number of columns if necessary.
+@mixin offset($columns, $total: null) {
+  @if ($total) {
+    margin-left: percentage($columns/$total);
+
+    @include minWidth(tablet) {
+    }
+    margin-left: percentage($columns/$total);
+
+    @include minWidth(small-desktop) {
+      margin-left: percentage($columns/$total);
+    }
+
+    @include minWidth(large-desktop) {
+      margin-left: percentage($columns/$total);
+    }
+  } @else {
+    margin-left: calc(#{percentage($columns/column(mobile))} + #{$gutter});
+
+    @include minWidth(tablet) {
+      margin-left: calc(#{percentage($columns/column(tablet))} + #{$gutter});
+    }
+
+    @include minWidth(small-desktop) {
+      margin-left: calc(#{percentage($columns/column(small-desktop))} + #{$gutter});
+    }
+
+    @include minWidth(large-desktop) {
+      margin-left: calc(#{percentage($columns/column(large-desktop))} + #{$gutter});
+    }
+  }
+}
+
+@mixin offset-exact($columns, $total: null, $offset: 0px, $multiplier: 1, $side: 'left') {
+  @if $total {
+    $totalGutterWidth: #{($total - 1) * $gutter};
+    $effectiveOffset: 0;
+    @if $columns <= 0 {
+      $effectiveOffset: $offset;
+    } @else {
+      $effectiveOffset: calc(
+
+          (
+             ((100% - #{$totalGutterWidth}) / #{$total}) * #{$columns} + #{($columns - 1) * $gutter} +
+              #{$offset}
+          ) * #{$multiplier}
+      );
+    }
+
+    @if $side == 'left' {
+      margin-left: $effectiveOffset;
+    } @else {
+      margin-right: $effectiveOffset;
+    }
+  }
+}
+
+// The mixin used to define the number of columns to span for a given element.
+// This takes in the number of columns to span, and the total number of columns if necessary.
+@mixin span-columns($columns, $total: null) {
+  @if $total {
+    flex-grow: 0;
+    flex-shrink: 0;
+    min-width: #{percentage($columns/$total)};
+    max-width: #{percentage($columns/$total)};
+  } @else {
+    flex-grow: 0;
+    flex-shrink: 0;
+    min-width: calc(#{percentage($columns/column(mobile))} - #{$gutter});
+    max-width: calc(#{percentage($columns/column(mobile))} - #{$gutter});
+
+    @include minWidth(tablet) {
+      min-width: calc(#{percentage($columns/column(tablet))} - #{$gutter});
+      max-width: calc(#{percentage($columns/column(tablet))} - #{$gutter});
+    }
+
+    @include minWidth(small-desktop) {
+      min-width: calc(#{percentage($columns/column(small-desktop))} - #{$gutter});
+      max-width: calc(#{percentage($columns/column(small-desktop))} - #{$gutter});
+
+      @media screen and (-ms-high-contrast:none) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    @include minWidth(large-desktop) {
+      min-width: calc(#{percentage($columns/column(large-desktop))} - #{$gutter});
+      max-width: calc(#{percentage($columns/column(large-desktop))} - #{$gutter});
+    }
+  }
+}
+
+@mixin span-columns-exact($columns, $total: null, $offset: 0px) {
+  @if $total {
+    $totalGutterWidth: #{($total - 1) * $gutter};
+    $colWidth: calc(
+       ((100% - #{$totalGutterWidth}) / #{$total}) * #{$columns} + #{($columns - 1) * $gutter} + #{$offset}
+    );
+
+    flex-grow: 0;
+    flex-shrink: 0;
+    min-width: $colWidth;
+    max-width: $colWidth;
+  }
+}
+
+@mixin fixed-columns-width($columns, $total, $breakpoint) {
+  @if $total {
+    $totalGutterWidth: #{($total - 1) * $gutter};
+    $colWidth: calc(
+       ((#{container-width($breakpoint)} - #{$totalGutterWidth}) / #{$total}) * #{$columns} + #{(
+          $columns - 1
+        ) * $gutter}
+    );
+    width: $colWidth;
+  }
+}
+
+// The mixin used to define the number of columns to span for a given element,
+// when that element is contained inside of other grid elements.
+// This takes in the number of columns to span, and the total number of columns
+// spanned by the container element.
+@mixin span-inner-columns-with-gutter($columns, $total) {
+  flex-grow: 0;
+  flex-shrink: 0;
+  min-width: calc(#{percentage($columns/$total)} - #{$gutter});
+  max-width: calc(#{percentage($columns/$total)} - #{$gutter});
+}
+
+// A mixin that uses our `negative()` and `uncontain-width()` functions to provide a
+// convenient way to set a component to be full-width.
+@mixin full-width($offset: null) {
+  margin-left: negative($outerGutter);
+  margin-right: negative($outerGutter);
+  width: 100vw;
+
+  @include minWidth(tablet) {
+    margin-left: uncontain-width(tablet);
+    margin-right: uncontain-width(tablet);
+    width: 100vw;
+  }
+
+  @include minWidth(small-desktop) {
+    margin-right: uncontain-width(small-desktop);
+    margin-left: uncontain-width(small-desktop);
+    width: 100vw;
+  }
+
+  @include minWidth(medium-desktop) {
+    margin-right: uncontain-width(medium-desktop);
+    margin-left: uncontain-width(medium-desktop);
+    width: 100vw;
+  }
+
+  @include minWidth(large-desktop) {
+    @if $offset {
+      $width: calc( (((#{$maxGridWidth}) - #{container-width(large-desktop)}) / -2));
+      $extra: $offset * (#{$maxGridWidth} / column(large-desktop));
+      $left: calc(#{$width} - #{$extra} - #{$gutter});
+
+      margin-left: $left;
+    } @else {
+      margin-left: calc( (((#{$maxGridWidth}) - #{container-width(large-desktop)}) / -2));
+    }
+
+    margin-right: uncontain-width(large-desktop);
+    max-width: #{$maxGridWidth};
+    width: 100vw;
+  }
+}
+
+@mixin clear-paddings() {
+  padding-left: 0;
+  padding-right: 0;
+
+  @include minWidth(tablet) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include minWidth(small-desktop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include minWidth(medium-desktop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include minWidth(large-desktop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// Mixin used to create a container that is full bleed, but whose content is limited
+// to the standard page size.
+@mixin true-full-width($offset: null) {
+  width: 100vw;
+  margin-left: -20px;
+
+  @include minWidth(tablet) {
+    margin-left: uncontain-width(tablet);
+    margin-right: uncontain-width(tablet);
+    width: 100vw;
+  }
+
+  @include minWidth(small-desktop) {
+    margin-right: uncontain-width(small-desktop);
+    margin-left: uncontain-width(small-desktop);
+    padding-left: true-full-width-padding(small-desktop);
+    padding-right: true-full-width-padding(small-desktop);
+    width: 100vw;
+  }
+
+  @include minWidth(medium-desktop) {
+    margin-right: uncontain-width(medium-desktop);
+    margin-left: uncontain-width(medium-desktop);
+    padding-left: true-full-width-padding(medium-desktop);
+    padding-right: true-full-width-padding(medium-desktop);
+    width: 100vw;
+  }
+
+  @include minWidth(large-desktop) {
+    margin-right: uncontain-width(large-desktop);
+    margin-left: uncontain-width(large-desktop);
+    padding-left: true-full-width-padding(large-desktop);
+    padding-right: true-full-width-padding(large-desktop);
+    max-width: none;
+    width: 100vw;
+  }
+}
+
+@mixin clear-paddings($offset: null) {
+  padding-left: 0;
+  padding-right: 0;
+
+  @include minWidth(tablet) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include minWidth(small-desktop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include minWidth(medium-desktop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include minWidth(large-desktop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// Our base grid mixin, used to define the base rules.
+@mixin grid() {
+  overflow: visible;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: container-width(large-desktop);
+  width: 100%;
+}
+
+// Our base row mixin, used to define the minimum styles needed to create a row in the grid.
+@mixin row() {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 $outerGutter;
+  margin-right: negative($gutter);
+
+  @include minWidth(tablet) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@mixin row-exact() {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 $outerGutter;
+  margin-right: 0;
+
+  @include minWidth(tablet) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// Mixin used to set up a grid container in any element.
+@mixin gridContainer() {
+  @include containerWidths();
+}
+
+// Mixin used to define the bare minimum right margin gutter definition on any given component.
+@mixin box() {
+  margin-right: $gutter;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@mixin unbox() {
+  margin-right: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// Mixin used to define the vertical spacing
+@mixin verticalSpacing() {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @include minWidth(small-desktop) {
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+}
+
+// A specific mixin used on the article body to create our responsive columne layout.
+@mixin articleBody() {
+  @include minWidth(tablet) {
+    @include offset(2);
+    @include span-columns(9, 12);
+  }
+
+  @include minWidth(small-desktop) {
+    @include offset(1);
+    @include span-columns(5, 5);
+  }
+
+  @include minWidth(large-desktop) {
+    @include offset(1, 7);
+    @include span-columns(6, 6);
+    margin-left: $gutter;
+  }
+}

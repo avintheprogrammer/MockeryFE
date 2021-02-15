@@ -1,0 +1,148 @@
+@import '../../assets/stylesheets/utils/grid';
+@import '../../assets/stylesheets/utils/colors';
+
+.page {
+  background-color: $mineShaft;
+  background-attachment: fixed;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.grid {
+  margin-bottom: 40px;
+
+  @include minWidth(tablet) {
+    @include containerFluidWidths();
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  @include minWidth(small-desktop) {
+    margin-bottom: 30px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+
+    @include minWidth(tablet) {
+      margin-bottom: 10px;
+    }
+
+    @include minWidth(small-desktop) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.container {
+  @include minWidth(tablet) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.gridItem {
+  border-top: 1px solid $straw;
+
+  @include minWidth(tablet) {
+    border: 1px solid $straw;
+    margin-right: $gutter;
+    margin-bottom: 30px;
+    width: calc((100% / 2) - 15px);
+  }
+
+  @include minWidth(small-desktop) {
+    margin-right: $gutter;
+    margin-bottom: 30px;
+    width: calc((100% / 3) - 20px);
+  }
+
+  &:nth-child(2n) {
+    @include minWidth(tablet) {
+      margin-right: 0;
+    }
+
+    @include minWidth(small-desktop) {
+      margin-right: $gutter;
+    }
+  }
+
+  &:nth-child(3n + 3) {
+    @include minWidth(small-desktop) {
+      margin-right: 0;
+    }
+  }
+}
+
+.gridSelectWrapper {
+  position: relative;
+  margin: 20px $gutter 30px;
+  width: calc(100% - (#{$gutter} * 2));
+
+  @include minWidth(tablet) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 30px;
+    width: calc(50% - 15px);
+  }
+
+  @include minWidth(small-desktop) {
+    display: none;
+  }
+}
+
+.gridSelect {
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  border-bottom: 1px solid $straw;
+  color: $white;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 2px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  width: 100%;
+}
+
+.gridSelectIcon {
+  color: $straw;
+  font-size: 8px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+.breakerWrapper {
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: '';
+    background-color: $less-black;
+    position: absolute;
+    left: 0;
+    top: 15px;
+    height: 180px;
+    width: 100%;
+
+    @include minWidth(tablet) {
+      height: 160px;
+    }
+
+    @include minWidth(small-desktop) {
+      top: 30px;
+    }
+
+    @include minWidth(large-desktop) {
+      height: 180px;
+    }
+  }
+}
+
+.breakerContainer {
+  @include minWidth(tablet) {
+    @include containerFluidWidths();
+  }
+}

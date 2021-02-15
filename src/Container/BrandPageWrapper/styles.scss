@@ -1,0 +1,300 @@
+@import '../../assets/stylesheets/global/index';
+@import '../../assets/stylesheets/utils/colors';
+@import '../../assets/stylesheets/utils/grid';
+
+.contentWrapper {
+  margin-top: 45px;
+  position: relative;
+  overflow: hidden;
+
+  @include minWidth(small-desktop) {
+    overflow: visible;
+  }
+
+  &::after {
+    content: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10000000;
+    background-position: center center;
+    background-repeat: repeat-y;
+    opacity: 0.1;
+    pointer-events: none;
+
+    @include minWidth(small-desktop) {
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA8AAAAK8AQMAAAAaj0TWAAAABlBMVEXj9PUHX2PVbKcXAAAAAXRSTlMAQObYZgAAAVJJREFUeJztzTENACAQBMFPEIAkrCMJASTw1RugI3PdFpeJU4uIVrGzetXKGlUz6/0GBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAw+Ef4Ap6MMETYg1JEAAAAAElFTkSuQmCC');
+      background-size: 960px 700px;
+    }
+
+    @include minWidth(medium-desktop) {
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDUAAAK8AQMAAADF0RaIAAAABlBMVEXj9PUHX2PVbKcXAAAAAXRSTlMAQObYZgAAAbpJREFUeJztzrERQFAQRdE1AqESlKI0SlOKEoQCg83+qkByNrvzgj3xtDsjYiqd2Zfcs5eWV+ZY5jWiK3nkPLe8M4cyb9mf1xwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcPzle9pH6dCHMS9sAAAAASUVORK5CYII=');
+      background-size: 1077px 700px;
+    }
+
+    @include minWidth(large-desktop) {
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQoAAAK8AQMAAACdpxD9AAAABlBMVEXj9PUHX2PVbKcXAAAAAXRSTlMAQObYZgAAAe1JREFUeJztzrEJACAQBMEHC7AkW7ckCxD0oy9BDOayDQ4mTi0iWsXO6lUra1TNrJc3RERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERETEv4kXlazq+xXqV3EAAAAASUVORK5CYII=');
+      background-size: 1290px 700px;
+    }
+  }
+
+  &.xfinity {
+    margin-top: 89px;
+  }
+
+  &.countDownClock {
+    margin-top: 112px;
+  }
+
+
+  @include minWidth(tablet) {
+    margin-top: 70px;
+
+    &.xfinity {
+      margin-top: 114px;
+    }
+
+    &.countDownClock {
+      margin-top: 112px;
+
+      &.xfinity {
+        margin-top: 156px;
+      }
+    }
+  }
+
+  &.newsAlert {
+    margin-top: 85px;
+
+    &.xfinity {
+      margin-top: 129px;
+    }
+
+    &.liveAlert {
+      margin-top: 125px;
+    }
+
+    &.countDownClock {
+      margin-top: 192px;
+    }
+
+    &.xfinity.liveAlert {
+      margin-top: 169px;
+    }
+
+
+    @include minWidth(tablet) {
+      margin-top: 110px;
+
+      &.xfinity {
+        margin-top: 154px;
+      }
+
+      &.liveAlert {
+        margin-top: 150px;
+      }
+
+      &.countDownClock {
+        margin-top: 152px;
+
+        &.xfinity {
+          margin-top: 196px;
+        }
+      }
+
+      &.xfinity.liveAlert {
+        margin-top: 194px;
+      }
+    }
+  }
+
+
+
+  &.liveAlert {
+    margin-top: 85px;
+
+    &.xfinity {
+      @include minWidth(mobile){
+        margin-top:128px;
+      }
+      @include minWidth(tablet){
+        margin-top:154px;
+      }
+      @include minWidth(small-desktop){
+        margin-top:154px;
+      }
+      @include minWidth(large-desktop){
+        margin-top:154px;
+      }
+    }
+
+    &.newsAlert {
+      @include minWidth(mobile){
+        margin-top: 125px;
+      }
+      @include minWidth(tablet){
+        margin-top: 150px;
+      }
+      @include minWidth(small-desktop){
+        margin-top: 150px;
+      }
+      @include minWidth(large-desktop){
+          margin-top: 150px;
+      }
+
+      &.countDownClock {
+        margin-top: 192px;
+
+        &.xfinity {
+          margin-top: 236px;
+        }
+      }
+    }
+
+    &.countDownClock {
+      margin-top: 152px;
+
+      &.xfinity {
+        margin-top: 196px;
+      }
+    }
+
+    @include minWidth(tablet) {
+      margin-top: 110px;
+    }
+  }
+
+  @include minWidth(small-desktop) {
+    // Offsets for sticky ad.
+
+    // Live or News alert only.
+    &.liveAlert,
+    &.newsAlert {
+      :global .Ad-adWrapperSticky {
+        top: 120px;
+      }
+    }
+
+    // Xfinity only.
+    &.xfinity {
+      :global .Ad-adWrapperSticky {
+        top: 124px;
+      }
+    }
+
+    // Countdown clock only.
+    &.countDownClock {
+      :global .Ad-adWrapperSticky {
+        top: 122px;
+      }
+    }
+
+    // Live AND News alert.
+    &.liveAlert.newsAlert {
+      :global .Ad-adWrapperSticky {
+        top: 160px;
+      }
+    }
+
+    // Live alert and xfinity / News alert and xfinity.
+    &.liveAlert.xfinity,
+    &.newsAlert.xfinity {
+      :global .Ad-adWrapperSticky {
+        top: 164px;
+      }
+    }
+
+    // Live alert and countdown clock / News alert and countdown clock.
+    &.liveAlert.countDownClock,
+    &.newsAlert.countDownClock {
+      :global .Ad-adWrapperSticky {
+        top: 162px;
+      }
+    }
+
+    // Live alert, news alert and countdown clock.
+    &.liveAlert.newsAlert.countDownClock {
+      :global .Ad-adWrapperSticky {
+        top: 202px;
+      }
+    }
+
+    // Live alert, news alert and xfinity.
+    &.liveAlert.newsAlert.countDownClock {
+      :global .Ad-adWrapperSticky {
+        top: 204px;
+      }
+    }
+
+    // All banners.
+    &.liveAlert.newsAlert.countDownClock.xfinity {
+      :global .Ad-adWrapperSticky {
+        top: 246px;
+      }
+    }
+  }
+
+  &.annualMeetings {
+    background-image: url('./../../assets/images/fpo/buffethub_bg.jpg');
+    background-attachment: fixed;
+  }
+}
+
+.contentWrapperBuffett {
+  composes: contentWrapper;
+
+  margin-top: 0;
+
+  @include minWidth(tablet) {
+    margin-top: 45px;
+  }
+
+  @include minWidth(small-desktop) {
+    margin-top: 100px;
+  }
+
+  &.timeline,
+  &.home {
+    @include minWidth(tablet) {
+      margin-top: 0;
+    }
+  }
+
+  &.transcript,
+  &.timeline {
+    overflow: visible;
+  }
+
+  &.home.newsAlert {
+    margin-top: 110px;
+  }
+}
+
+.contentWrapperDond {
+  composes: contentWrapper;
+  background-color: $dond-black;
+  margin-top: 0;
+  background-color: #111;
+
+  &.liveAlert {
+    margin-top: 40px;
+  }
+}
+
+.contentWrapperClock {
+  margin-top: 112px;
+}
+
+.contentWrapperMakeit {
+  composes: contentWrapper;
+
+  @include minWidth(tablet) {
+    margin-top: 60px;
+  }
+
+  @include minWidth(small-desktop) {
+    margin-top: 75px;
+  }
+}

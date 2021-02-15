@@ -1,0 +1,31 @@
+@import '../../assets/stylesheets/utils/grid';
+@import '../../assets/stylesheets/utils/colors';
+
+.buttonContainer {
+  width: auto;
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+  @include minWidth(tablet) {
+    margin-bottom: 50px;
+  }
+}
+
+.loadMoreButton {
+  font-weight: 600;
+  height: 40px;
+  line-height: 40px;
+  width: 145px;
+  border: 1px solid $medium-blue;
+  color: $medium-blue;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 12px;
+
+  &:hover {
+    background-color: $dark-blue;
+    color: $white;
+  }
+}

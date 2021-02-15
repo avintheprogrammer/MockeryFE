@@ -1,0 +1,17 @@
+@mixin fontWeight($weight) {
+  @if $weight == 'Regular' {
+    font-weight: 400;
+  }
+  @else if $weight == 'Semibold' {
+    font-weight: 500;
+  }
+  @else if $weight == 'Bold' {
+    font-weight: 600;
+  }
+  @else if $weight == 'Extrabold' {
+    font-weight: 700;
+  }
+  @else if $weight == 'Black' {
+    font-weight: 800;
+  }
+}

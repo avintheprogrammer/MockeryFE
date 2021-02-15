@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Section Header renders correctly 1`] = `
+<Banner
+  backgroundType="color"
+  brand="mockery"
+  data={
+    Object {
+      "section": Object {
+        "title": "the section",
+      },
+      "title": "hello",
+    }
+  }
+  dataId={0}
+  eyebrowType="text"
+  sectionColor=""
+/>
+`;

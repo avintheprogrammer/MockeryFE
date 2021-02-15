@@ -1,0 +1,426 @@
+@import './breakpoints';
+@import './colors';
+@import './typography';
+
+@mixin not($ignoreList...) {
+  // if only a single value given
+  @if (length($ignoreList) == 1) {
+    // it is probably a list variable so set ignore list to the variable
+    $ignoreList: nth($ignoreList, 1);
+  }
+  //set up an empty $notOutput variable
+  $notOutput: '';
+  // for each item in the list
+  @each $not in $ignoreList {
+    // generate a :not([ignored_item]) segment for each item in the ignore list and put them back to back
+    $notOutput: $notOutput + ':not(#{$not})';
+  }
+  // output the full :not() rule including all ignored items
+  &#{$notOutput} {
+    @content;
+  }
+}
+
+@mixin fullyContained() {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin adStyles() {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+%navMenu {
+  background-color: $blue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  left: 0;
+  overflow: hidden;
+  height: 54px;
+  z-index: 99;
+
+  @include minWidth(tablet) {
+    padding: 0 20px;
+  }
+
+  @include minWidth(small-desktop) {
+    background-color: transparent;
+    height: 35px;
+    padding: 0 15px 0 30px;
+  }
+}
+
+/**
+ * A commonly used style. Blue text and arrow that translate to the right on hover.
+ * In general, should be an <a> tag with aria-hidden span with the correct class
+ * to render the icon.
+ */
+@mixin callToActionWithArrow($text-color: $medium-blue, $arrow-color: $gold) {
+  @include fontWeight('Bold');
+  display: inline-block;
+  color: $text-color;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-transform: uppercase;
+
+  [class*='icon-'] {
+    display: inline-block;
+    margin-left: 5px;
+    color: $arrow-color;
+    transform: translateX(0);
+    transition: transform 0.5s ease-out;
+  }
+
+  &:hover,
+  &:focus {
+    color: $text-color;
+
+    [class*='icon-'] {
+      color: $arrow-color;
+      transform: translateX(7px);
+      transition: transform 0.25s ease-in;
+    }
+  }
+}
+
+/**
+ * Standard button.
+ * 40px tall at all breakpoints.
+ * 100% at mobile, auto at higher breakpoints.
+ * 30px padding on left and right at higher breakpoints.
+ * Border or solid background - hovers to solid background or border.
+ * Text inside should be wrapped in a <span>.
+ * Works for <a> or <button>.
+ * Can include another <span> defining an icon.
+**/
+@mixin standardButton(
+  $borderColor: $medium-blue,
+  $bgColor: $white,
+  $textColor: $medium-blue,
+  $borderHover: $medium-blue,
+  $bgHover: $medium-blue,
+  $textHover: $white
+) {
+  @include fontWeight('Bold');
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 100%;
+  padding: 0 20px;
+  border: 1px solid $borderColor;
+  background-color: $bgColor;
+  color: $textColor;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.15s linear;
+
+  > span {
+    display: block;
+    line-height: 12px;
+  }
+
+  [class^='icon-'],
+  [class*=' icon-'] {
+    position: relative;
+    margin-left: 5px;
+    height: 12px;
+
+    &:before {
+      line-height: 12px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $borderHover;
+    background-color: $bgHover;
+    color: $textHover;
+  }
+
+  /*
+    If the button needs to force remove the hover state on mobile,
+    add touchButton class to it.
+   */
+  &[class*='touchButton'] {
+    &:hover {
+      border-color: $borderColor;
+      background-color: $bgColor;
+      color: $textColor;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        border-color: $borderHover;
+        background-color: $bgHover;
+        color: $textHover;
+      }
+    }
+  }
+
+  @include minWidth(tablet) {
+    width: auto;
+    padding: 0 30px;
+  }
+}
+
+@mixin marquee {
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    left: 0%;
+  }
+  50% {
+    top: 0;
+    left: calc(-100% - 60px);
+  }
+  51% {
+    top: -100px;
+    left: calc(-100% - 60px);
+  }
+  52% {
+    top: -100px;
+    left: 100%;
+  }
+  53% {
+    top: 0;
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@mixin makeItLogoCircle($size) {
+  &::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: $turquoise;
+    height: 1px;
+    width: 1px;
+    right: 13%;
+    top: 14%;
+    transform-origin: center center;
+    transform: scale(1);
+
+    @if $size == 'small' {
+      animation: circlePulseSmall 1s;
+    } @else {
+      animation: circlePulseLarge 1s;
+    }
+  }
+
+  &:focus {
+    &::before {
+      @if $size == 'small' {
+        animation: circlePulseSmall 1s infinite;
+      } @else {
+        animation: circlePulseLarge 1s infinite;
+      }
+    }
+  }
+
+  @include minWidth(small-desktop) {
+    &:focus,
+    &:hover {
+      &::before {
+        animation: circlePulseLarge2 1.5s infinite;
+      }
+    }
+  }
+}
+
+@keyframes circlePulseSmall {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(50);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes circlePulseLarge {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(65);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes circlePulseLarge2 {
+  0% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(65);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@mixin circleStory() {
+  animation: circleStory 1.2s;
+}
+
+@mixin expandedLinkText() {
+  animation: circleStory 1s;
+}
+
+@keyframes circleStory {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+  Circle with play button for Make It.
+ */
+@mixin makeItPlayInCircle($radius: 60px, $playSize: 18px, $circleColor: $bittersweet-orange) {
+  position: relative;
+  display: inline-block;
+  height: $radius;
+  width: $radius;
+  background-color: $circleColor;
+  border-radius: 50%;
+  transition: background-color 0.25s linear;
+
+  &:before {
+    display: block;
+    font-family: 'makeit-icons';
+    content: '\e910';
+    color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: $playSize;
+    margin: auto;
+    font-size: $playSize;
+    line-height: $radius;
+  }
+}
+
+@mixin dondButton() {
+
+  display: inline-block;
+  position: relative;
+
+  > :first-child {
+    display: inline-block;
+
+    border: 2px solid $orange-yellow;
+    cursor: pointer;
+    padding: 16px 30px;
+    font-family: 'Proxima Nova';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.54px;
+    color: $white;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+
+    @include minWidth(small-desktop) {
+      padding: 21px 37px;
+    }
+
+    &::after {
+      content: '';
+      background: transparent;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.05s;
+      position: absolute;
+      height: 0px;
+      width: 0px;
+    }
+
+    > :first-child {
+      z-index: 1;
+      position: relative;
+      line-height: 1;
+
+      span {
+        position: relative;
+        left: 8px;
+        font-size: 10px;
+      }
+    }
+  }
+
+  &:hover {
+    color: $almost-black;
+
+    > :first-child {
+
+      color: $almost-black;
+
+      &::after {
+        background-image: linear-gradient(
+          to bottom right,
+          #{$banana-mania},
+          #{$banana-mania} 54%,
+          #{$orange-yellow} 100%
+        );
+        transition: all 0.15s;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

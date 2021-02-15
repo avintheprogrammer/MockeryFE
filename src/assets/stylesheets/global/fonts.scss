@@ -1,0 +1,117 @@
+@mixin fontFace($fontName, $fontWeight, $fontStyle, $fontFilePath, $formats) {
+  $src: '';
+  @each $format in $formats {
+  @if str-length($src) > 0 {
+    $src: $src + ' ,';
+  }
+    $src: $src + "url('#{$fontFilePath}') format('#{$format}')";
+  }
+
+  @font-face {
+    font-family: $fontName;
+    src: #{$src};
+    font-weight: $fontWeight;
+    font-style: $fontStyle;
+  }
+}
+
+// Rozha One Reg
+@include fontFace('Rozha One', 400, normal, '../../assets/fonts/RozhaOne/RozhaOne-Regular.ttf', ('ttf'));
+
+// Averta Reg
+@include fontFace('Averta', 400, normal, '../../assets/fonts/Averta/361747_3_0.eot', ('eot'));
+@include fontFace('Averta', 400, normal, '../../assets/fonts/Averta/361747_3_0.eot?#iefix', ('embedded-opentype'));
+@include fontFace('Averta', 400, normal, '../../assets/fonts/Averta/361747_3_0.woff', ('woff'));
+@include fontFace('Averta', 400, normal, '../../assets/fonts/Averta/361747_3_0.woff2', ('woff2'));
+@include fontFace('Averta', 400, normal, '../../assets/fonts/Averta/361747_3_0.ttf', ('ttf'));
+
+// Averta Bold
+@include fontFace('Averta', 600, normal, '../../assets/fonts/Averta/361747_0_0.eot', ('eot'));
+@include fontFace('Averta', 600, normal, '../../assets/fonts/Averta/361747_0_0.eot?#iefix', ('embedded-opentype'));
+@include fontFace('Averta', 600, normal, '../../assets/fonts/Averta/361747_0_0.woff', ('woff'));
+@include fontFace('Averta', 600, normal, '../../assets/fonts/Averta/361747_0_0.woff2', ('woff2'));
+@include fontFace('Averta', 600, normal, '../../assets/fonts/Averta/361747_0_0.ttf', ('ttf'));
+
+// Averta ExtraBold
+@include fontFace('Averta', 700, normal, '../../assets/fonts/Averta/361747_1_0.eot', ('eot'));
+@include fontFace('Averta', 700, normal, '../../assets/fonts/Averta/361747_1_0.eot?#iefix', ('embedded-opentype'));
+@include fontFace('Averta', 700, normal, '../../assets/fonts/Averta/361747_1_0.woff', ('woff'));
+@include fontFace('Averta', 700, normal, '../../assets/fonts/Averta/361747_1_0.woff2', ('woff2'));
+@include fontFace('Averta', 700, normal, '../../assets/fonts/Averta/361747_1_0.ttf', ('ttf'));
+
+// Averta Black
+@include fontFace('Averta', 800, normal, '../../assets/fonts/Averta/361747_2_0.eot', ('eot'));
+@include fontFace('Averta', 800, normal, '../../assets/fonts/Averta/361747_2_0.eot?#iefix', ('embedded-opentype'));
+@include fontFace('Averta', 800, normal, '../../assets/fonts/Averta/361747_2_0.woff', ('woff'));
+@include fontFace('Averta', 800, normal, '../../assets/fonts/Averta/361747_2_0.woff2', ('woff2'));
+@include fontFace('Averta', 800, normal, '../../assets/fonts/Averta/361747_2_0.ttf', ('ttf'));
+
+// Proxima Nova Reg
+@include fontFace('Proxima Nova', 400, normal, '../../assets/fonts/ProximaNova/351C86_3_0.eot', ('eot'));
+@include fontFace('Proxima Nova', 400, normal, '../../assets/fonts/ProximaNova/351C86_3_0.eot?#iefix', ('embedded-opentype'));
+@include fontFace('Proxima Nova', 400, normal, '../../assets/fonts/ProximaNova/351C86_3_0.woff2', ('woff2'));
+@include fontFace('Proxima Nova', 400, normal, '../../assets/fonts/ProximaNova/351C86_3_0.woff', ('woff'));
+@include fontFace('Proxima Nova', 400, normal, '../../assets/fonts/ProximaNova/351C86_3_0.ttf', ('truetype'));
+
+// Proxima Nova Smbd
+@include fontFace('Proxima Nova', 500, normal, '../../assets/fonts/ProximaNova/351C86_4_0.eot', ('eot'));
+@include fontFace('Proxima Nova', 500, normal, '../../assets/fonts/ProximaNova/351C86_4_0.eot?#iefix', ('embedded-opentype'));
+@include fontFace('Proxima Nova', 500, normal, '../../assets/fonts/ProximaNova/351C86_4_0.woff2', ('woff2'));
+@include fontFace('Proxima Nova', 500, normal, '../../assets/fonts/ProximaNova/351C86_4_0.woff', ('woff'));
+@include fontFace('Proxima Nova', 500, normal, '../../assets/fonts/ProximaNova/351C86_4_0.ttf', ('truetype'));
+
+// Proxima Nova Bold
+@include fontFace('Proxima Nova', 600, normal, '../../assets/fonts/ProximaNova/351C86_1_0.eot', ('eot'));
+@include fontFace('Proxima Nova', 600, normal, '../../assets/fonts/ProximaNova/351C86_1_0.eot?#iefix', ('embedded-opentype'));
+@include fontFace('Proxima Nova', 600, normal, '../../assets/fonts/ProximaNova/351C86_1_0.woff2', ('woff2'));
+@include fontFace('Proxima Nova', 600, normal, '../../assets/fonts/ProximaNova/351C86_1_0.woff', ('woff'));
+@include fontFace('Proxima Nova', 600, normal, '../../assets/fonts/ProximaNova/351C86_1_0.ttf', ('truetype'));
+
+// Proxima Nova ExtraBold
+@include fontFace('Proxima Nova', 700, normal, '../../assets/fonts/ProximaNova/351C86_2_0.eot', ('eot'));
+@include fontFace('Proxima Nova', 700, normal, '../../assets/fonts/ProximaNova/351C86_2_0.eot?#iefix', ('embedded-opentype'));
+@include fontFace('Proxima Nova', 700, normal, '../../assets/fonts/ProximaNova/351C86_2_0.woff2', ('woff2'));
+@include fontFace('Proxima Nova', 700, normal, '../../assets/fonts/ProximaNova/351C86_2_0.woff', ('woff'));
+@include fontFace('Proxima Nova', 700, normal, '../../assets/fonts/ProximaNova/351C86_2_0.ttf', ('truetype'));
+
+// Proxima Nova Black
+@include fontFace('Proxima Nova', 800, normal, '../../assets/fonts/ProximaNova/351C86_0_0.eot', ('eot'));
+@include fontFace('Proxima Nova', 800, normal, '../../assets/fonts/ProximaNova/351C86_0_0.eot?#iefix', ('embedded-opentype'));
+@include fontFace('Proxima Nova', 800, normal, '../../assets/fonts/ProximaNova/351C86_0_0.woff2', ('woff2'));
+@include fontFace('Proxima Nova', 800, normal, '../../assets/fonts/ProximaNova/351C86_0_0.woff', ('woff'));
+@include fontFace('Proxima Nova', 800, normal, '../../assets/fonts/ProximaNova/351C86_0_0.ttf', ('truetype'));
+
+// Lyon Regular
+@include fontFace('Lyon', 400, normal, '../../assets/fonts/Lyon/LyonText-Regular-Web.eot', ('eot'));
+@include fontFace('Lyon', 400, normal, '../../assets/fonts/Lyon/LyonText-Regular-Web.woff', ('woff'));
+@include fontFace('Lyon', 400, normal, '../../assets/fonts/Lyon/LyonText-Regular-Web.woff2', ('woff2'));
+@include fontFace('Lyon', 400, italic, '../../assets/fonts/Lyon/LyonText-RegularItalic-Web.eot', ('eot'));
+@include fontFace('Lyon', 400, italic, '../../assets/fonts/Lyon/LyonText-RegularItalic-Web.woff', ('woff'));
+@include fontFace('Lyon', 400, italic, '../../assets/fonts/Lyon/LyonText-RegularItalic-Web.woff2', ('woff2'));
+
+// Lyon Semibold
+@include fontFace('Lyon', 500, normal, '../../assets/fonts/Lyon/LyonText-Semibold-Web.eot', ('eot'));
+@include fontFace('Lyon', 500, normal, '../../assets/fonts/Lyon/LyonText-Semibold-Web.woff', ('woff'));
+@include fontFace('Lyon', 500, normal, '../../assets/fonts/Lyon/LyonText-Semibold-Web.woff2', ('woff2'));
+
+// Lyon Bold
+@include fontFace('Lyon', 600, normal, '../../assets/fonts/Lyon/LyonText-Bold-Web.eot', ('eot'));
+@include fontFace('Lyon', 600, normal, '../../assets/fonts/Lyon/LyonText-Bold-Web.woff', ('woff'));
+@include fontFace('Lyon', 600, normal, '../../assets/fonts/Lyon/LyonText-Bold-Web.woff2', ('woff2'));
+
+// Lyon Black
+@include fontFace('Lyon', 800, normal, '../../assets/fonts/Lyon/LyonText-Black-Web.eot', ('eot'));
+@include fontFace('Lyon', 800, normal, '../../assets/fonts/Lyon/LyonText-Black-Web.woff', ('woff'));
+@include fontFace('Lyon', 800, normal, '../../assets/fonts/Lyon/LyonText-Black-Web.woff2', ('woff2'));
+
+
+// Averta Reg
+@include fontFace('Averta', 400, normal, '../../assets/fonts/Averta/361747_3_0.eot', ('eot'));
+@include fontFace('Averta', 400, normal, '../../assets/fonts/Averta/361747_3_0.eot?#iefix', ('embedded-opentype'));
+
+// Fix for missing font on android device
+@font-face {
+  font-family: "Rozha One";
+  src: url('../../assets/fonts/RozhaOne/RozhaOne-Regular.ttf');
+  font-weight: 400;
+  font-style: normal; }

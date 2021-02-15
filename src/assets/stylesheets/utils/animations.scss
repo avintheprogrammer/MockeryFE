@@ -1,0 +1,17 @@
+/*
+  Zoom Hover is used for various hover interactions.
+  ie: Show Cards and Newsletter selectors.
+ */
+@mixin zoom-mouse-in($targetScale: 1.05) {
+  transform-origin: center;
+  transform: scale($targetScale);
+  transition: transform 0.5s ease-in-out;
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@mixin zoom-mouse-out($originalScale: 1) {
+  transform-origin: center;
+  transform: scale($originalScale);
+  transition: transform 0.5s ease-in-out;
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}

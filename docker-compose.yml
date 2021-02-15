@@ -1,0 +1,46 @@
+version: '3'
+services:
+  phoenix:
+    build:
+      context: .
+      args:
+        - BUILD_ENV
+        - APP_NAME
+        - SPLUNK_FORWARDER
+        - NEWRELIC_LICENSE_KEY
+    environment:
+      - NODE_ENV
+      - NEWRELIC_LICENSE_KEY
+      - NEWRELIC_APP_NAME
+      - WEB_PORT
+      - SPLUNK_SERVER
+      - SPLUNK_TOKEN
+      - DOCKER_REGISTRY
+    image: ${DOCKER_REGISTRY}mockery/phoenix:${NODE_ENV}
+    ports:
+      - "${WEB_PORT}:3000"
+    logging:
+      driver: splunk
+      options:
+        splunk-url: ${SPLUNK_SERVER}
+        splunk-token: ${SPLUNK_TOKEN}
+        splunk-insecureskipverify: 'true'
+        tag: ${NEWRELIC_APP_NAME}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/healthcheck/up"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      #start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 5
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2GB

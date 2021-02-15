@@ -1,0 +1,122 @@
+@import '../../assets/stylesheets/utils/grid';
+@import '../../assets/stylesheets/utils/colors';
+@import '../../assets/stylesheets/utils/typography';
+
+.page {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.grid {
+  @include grid();
+}
+
+.wrapper {
+  @include gridContainer();
+}
+
+.row {
+  @include row();
+  padding: 0;
+  margin-right: negative($outerGutter);
+}
+
+.buffettHeader {
+  color: $less-black;
+  font-family: 'Lyon';
+  font-size: 24px;
+  font-style: italic;
+  letter-spacing: 0.26px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 10px;
+
+  @include minWidth(tablet) {
+    font-size: 40px;
+    letter-spacing: 0.4px;
+    margin-bottom: 20px;
+  }
+
+  @include minWidth(small-desktop) {
+    font-size: 52px;
+    letter-spacing: 0.52px;
+    margin-bottom: 30px;
+  }
+
+  span {
+    @include fontWeight('Black');
+    color: $tawny-port;
+    font-style: normal;
+  }
+
+  &::after {
+    content: '';
+    background-color: $spring-wood;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 90px;
+    width: 100%;
+    z-index: -1;
+
+    @include minWidth(tablet) {
+      top: 20px;
+      height: 145px;
+    }
+
+    @include minWidth(small-desktop) {
+      height: 198px;
+      top: 26px;
+    }
+
+    @include minWidth(large-desktop) {
+      height: 260px;
+    }
+  }
+}
+
+.buffettComponent {
+  margin: 40px 0;
+
+  @include minWidth(small-desktop) {
+    margin: 60px 0;
+  }
+}
+
+.buffettComponentContainer {
+  @include containerFluidWidths();
+}
+
+.buffettComponentGrid {
+  @include minWidth(small-desktop) {
+    @include offset(1);
+    @include span-columns(7);
+  }
+
+  @include minWidth(large-desktop) {
+    @include span-columns(10);
+  }
+}
+
+.buffettComponentBox {
+  @include minWidth(tablet) {
+    margin-left: -20px;
+  }
+
+  @include minWidth(small-desktop) {
+    margin-left: -40px;
+    margin-right: 10px;
+  }
+}
+
+.buffettSearchWrapper {
+  margin-bottom: 30px;
+
+  @include minWidth(tablet) {
+    margin-bottom: 40px;
+  }
+
+  @include minWidth(small-desktop) {
+    margin-bottom: 60px;
+  }
+}

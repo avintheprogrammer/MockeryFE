@@ -1,0 +1,663 @@
+@import '../../../assets/stylesheets/utils/grid';
+@import '../../../assets/stylesheets/utils/colors';
+@import '../../../assets/stylesheets/utils/typography';
+
+$HEADER_FONT_SIZE: 12px;
+$HEADER_LARGE_FONT_SIZE: 28px;
+$HEADER_LARGE_IMAGE_MARGIN: -100px;
+
+.articleHeader {
+  position: relative;
+  background-repeat-y: no-repeat;
+
+  @include minWidth(tablet) {
+    margin-bottom: 15px;
+    margin-left: 0;
+  }
+}
+
+.wrapper {
+  @include span-columns(4);
+  padding-left: 2px;
+
+  @include minWidth(tablet) {
+    @include span-columns(12);
+  }
+
+  @include minWidth(small-desktop) {
+    @include span-columns-exact(6, 9);
+  }
+
+  @include minWidth(large-desktop) {
+    @include span-columns-exact(8, 12);
+    @include offset-exact(1, 12);
+  }
+}
+
+.wrapperNoImage {
+  @include span-columns(4);
+  max-width: 100%;
+
+  @include minWidth(tablet) {
+    @include span-columns(12);
+  }
+
+  @include minWidth(small-desktop) {
+    @include span-columns-exact(8, 9);
+  }
+
+  @include minWidth(large-desktop) {
+    @include span-columns-exact(8, 11, $gutter);
+    @include offset-exact(1, 12, $gutter);
+  }
+}
+
+.wrapperHero {
+  composes: wrapper;
+  background-color: $white;
+  position: relative;
+  padding-top: 18px;
+
+  @include minWidth(tablet) {
+    // padding-top: 80px;
+  }
+
+  @include minWidth(large-desktop) {
+    padding-left: 30px;
+    padding-right: 70px;
+  }
+
+  &::before {
+    content: '';
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 1px;
+    height: 100%;
+    transform: translateX(-100%);
+    width: calc((100vw - 100%) / 2);
+  }
+}
+
+.wrapperHeroNoImage {
+  composes: wrapperHero;
+  composes: wrapperNoImage;
+
+  @include minWidth(large-desktop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.heroDescriptionWrapper {
+  display: none;
+
+  @include minWidth(small-desktop) {
+    display: block;
+    top: 415px;
+    position: absolute;
+    width: 100%;
+  }
+
+  @include minWidth(large-desktop) {
+    top: 500px;
+  }
+}
+
+.heroDescription {
+  margin-top: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px dotted $mid-light-grey;
+
+  @include minWidth(small-desktop) {
+    @include offset(6);
+    @include span-columns(4);
+    transform: translateX(negative($gutter));
+  }
+
+  @include minWidth(large-desktop) {
+    @include offset(9);
+    transform: translateX(0px);
+    // Need important here to override includes.
+    margin-left: 73% !important;
+  }
+}
+
+.brandedTreatment {
+  @include fontWeight('Regular');
+  font-family: 'Lyon';
+  font-size: 12px;
+  font-style: italic;
+  color: $middle-grey;
+  margin-bottom: 20px;
+
+  a {
+    color: $middle-grey;
+  }
+
+  img {
+    display: inline;
+    height: 25px;
+    width: auto;
+    vertical-align: bottom;
+    margin-left: 10px;
+  }
+}
+
+.proBug {
+  color: $pro-green;
+  font-size: 50px;
+  line-height: 5px;
+}
+
+.eyebrow {
+  @include box();
+  @include fontWeight('Extrabold');
+  display: inline-block;
+  color: $middle-blue;
+  font-size: $HEADER_FONT_SIZE;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+  @include minWidth(small-desktop) {
+    padding-left: 2px;
+  }
+}
+
+.headline {
+  @include box();
+  @include fontWeight('Extrabold');
+  font-size: $HEADER_LARGE_FONT_SIZE;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 10px;
+  width: 100%;
+  color: $black;
+
+  &:hover,
+  &:focus {
+    color: $black;
+  }
+
+  @include minWidth(tablet) {
+    font-size: 40px;
+    line-height: 1.05;
+    margin-bottom: 15px;
+  }
+
+  @include minWidth(large-desktop) {
+    font-size: 54px;
+    line-height: 1.037;
+  }
+}
+
+.mockeryDivider {
+  visibility: hidden;
+  @include minWidth(tablet) {
+    visibility: visible;
+  }
+}
+
+.time {
+  @include box();
+  @include fontWeight('Bold');
+  color: $middle-grey;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+  width: 100%;
+  white-space: normal;
+
+  time {
+    white-space: nowrap;
+  }
+
+  @include minWidth(tablet) {
+    font-size: $HEADER_FONT_SIZE;
+  }
+}
+
+.authorAndShare {
+  @include span-columns(4, 4);
+  z-index: 2;
+  flex-wrap: wrap;
+  margin-bottom: 0px;
+
+  @include minWidth(tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include minWidth(small-desktop) {
+    margin-bottom: 0;
+    @include span-columns-exact(6, 9);
+  }
+
+  @include minWidth(large-desktop) {
+    @include span-columns-exact(7, 12);
+    @include offset-exact(1, 12, $gutter);
+  }
+}
+
+.imageHero {
+  @include full-width();
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 160px;
+  margin-bottom: -40px;
+  background-repeat-y: no-repeat;
+  background-position: inherit;
+
+  @include minWidth(tablet) {
+    height: 405px;
+    margin-bottom: -60px;
+  }
+
+  @include minWidth(small-desktop) {
+    height: 415px;
+    margin-bottom: $HEADER_LARGE_IMAGE_MARGIN;
+  }
+
+  @include minWidth(large-desktop) {
+    height: 500px;
+    margin-bottom: $HEADER_LARGE_IMAGE_MARGIN;
+  }
+}
+
+.authorContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+
+  @include minWidth(tablet) {
+    margin-bottom: 20px;
+  }
+  
+  @include minWidth(large-desktop) {
+    margin-top: 8px;
+  }
+}
+
+.author {
+  padding: 10px 0;
+}
+
+.author:last-child {
+  padding-right: 0;
+}
+
+.heroDescriptionCaption {
+  @include fontWeight('Bold');
+  color: $less-black;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.heroDescriptionCredit {
+  @include fontWeight('Regular');
+  color: $middle-grey;
+  font-family: 'Lyon';
+  font-size: 12px;
+  font-style: italic;
+}
+
+.makeit {
+  font-family: "Averta";
+}
+
+.wrapper {
+  .makeit & {
+    @include span-columns(4, 4);
+    padding-left: 2px;
+
+    @include minWidth(tablet) {
+      @include span-columns(12);
+    }
+
+    @include minWidth(small-desktop) {
+      @include span-columns-exact(6, 9);
+    }
+
+    @include minWidth(large-desktop) {
+      @include span-columns-exact(8, 12);
+      @include offset-exact(1, 12, $gutter);
+    }
+  }
+}
+
+.wrapperNoImage {
+  .makeit & {
+    @include minWidth(small-desktop) {
+      @include span-columns-exact(8, 9);
+    }
+
+    @include minWidth(large-desktop) {
+      @include span-columns-exact(10, 12);
+      @include offset-exact(1, 12, $gutter);
+    }
+  }
+}
+
+.wrapperNoImage {
+  .makeit & {
+    @include minWidth(small-desktop) {
+      @include span-columns-exact(8, 9);
+    }
+
+    @include minWidth(large-desktop) {
+      @include span-columns-exact(10, 12);
+      @include offset-exact(1, 12, $gutter);
+    }
+  }
+ }
+
+
+.eyebrow {
+  .makeit & {
+    text-transform: uppercase;
+    color: $cornflower-blue;
+    @include fontWeight('Bold');
+    letter-spacing: 1.5px;
+
+    &:hover, &:focus {
+      color: $bittersweet-orange;
+    }
+  }
+}
+
+.headline {
+  .makeit & {
+    font-size: 28px;
+    @include fontWeight('Extrabold');
+    line-height: 1.14;
+    color: $river-bed;
+
+    @include minWidth(tablet) {
+      font-size: 42px;
+      line-height: 1.1;
+    }
+
+    @include minWidth(large-desktop) {
+      font-size: 54px;
+      line-height: 1.07;
+    }
+  }
+}
+
+.author:last-child {
+  .makeit & {
+    display: flex;
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+.time {
+  .makeit & {
+    color: $river-bed;
+    @include fontWeight('Bold');
+    text-transform: capitalize;
+    font-size: 11px;
+
+    @include minWidth(tablet) {
+      font-size: 12px;
+    }
+  }
+}
+
+.brandedTreatment {
+  .makeit & {
+    font-family: "Averta";
+    @include fontWeight('Bold');
+    color: $river-bed;
+    font-size: 12px;
+    font-style: normal;
+  }
+}
+
+.authorAndShare {
+  .makeit & {
+    margin-left: 0;
+
+    @include minWidth(tablet) {
+     width: 100%;
+     max-width: 100%;
+   }
+
+   @include minWidth(small-desktop) {
+     margin-bottom: 0;
+     @include span-columns-exact(6, 9);
+   }
+
+   @include minWidth(large-desktop) {
+     @include span-columns-exact(7, 12);
+     @include offset-exact(1, 12, $gutter);
+   }
+  }
+}
+
+.authorAndShareInline {
+  margin-left: 0;
+  z-index: 2;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+
+  @include minWidth(tablet) {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include minWidth(small-desktop) {
+    margin-bottom: 0;
+    @include span-columns-exact(5, 9);
+  }
+
+  @include minWidth(large-desktop) {
+    @include span-columns-exact(6, 12);
+    @include offset-exact(1, 12, $gutter);
+  }
+
+}
+
+.heroDescription {
+  .makeit & {
+    font-family: "Averta";
+    font-style: normal;
+    @include fontWeight('Regular');
+    font-size: 12px;
+    line-height: 1.5;
+    color: $river-bed;
+    border-bottom: none;
+
+    @include minWidth(small-desktop) {
+      @include offset(6);
+      @include span-columns(4);
+      transform: translateX(negative($gutter));
+    }
+
+    @include minWidth(large-desktop) {
+      @include offset(9);
+      transform: translateX(negative($gutter));
+      margin-left: calc(75% + 30px) !important;
+    }
+  }
+}
+
+.separator {
+  display: inline-block;
+  color: $bittersweet-orange;
+  font-size: 24px;
+  transform: translateY(4px);
+  line-height: 0;
+}
+
+.imageHero {
+  .makeit & {
+    @include true-full-width();
+  }
+}
+
+.fullWidthVideo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  @include true-full-width();
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 0;
+  padding-top: 100vw;
+  font-family: "Averta";
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0.5);
+  }
+
+  @include minWidth(tablet) {
+    padding-top: calc(100vw * .5555);
+  }
+}
+
+.videoContent {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 40px;
+  width: 100vw;
+
+  @include minWidth(tablet) {
+    @include gridContainer();
+  }
+
+  @include minWidth(small-desktop) {
+    top: 60px;
+  }
+
+  @include minWidth(large-desktop) {
+    top: 80px;
+  }
+}
+
+.videoTitle {
+  color: $white;
+  font-size: 30px;
+  line-height: 34px;
+  @include fontWeight('Extrabold');
+  line-height: 1;
+  width: 90%;
+  text-align: center;
+  padding-bottom: 10px;
+
+  @include minWidth(tablet) {
+    font-size: 48px;
+    line-height: 52px;
+    @include span-columns(8, 12);
+  }
+
+  @include minWidth(small-desktop) {
+    font-size: 60px;
+    line-height: 64px;
+    @include span-columns(5);
+  }
+
+  @include minWidth(large-desktop) {
+    font-size: 92px;
+    line-height: 96px;
+    @include span-columns(8);
+  }
+}
+
+.videoTime {
+  color: $white;
+  @include fontWeight('Bold');
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding-bottom: 20px;
+
+  span {
+    color: $turquoise;
+    font-size: 8px;
+    margin-right: 5px;
+  }
+}
+
+.videoButton {
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: $bittersweet-orange;
+
+  &:hover, &:focus {
+    background-color: $cornflower-blue;
+  }
+
+  @include minWidth(small-desktop) {
+    height: 100px;
+    width: 100px;
+  }
+
+  span {
+    position: absolute;
+    top: 19px;
+    left: 21px;
+    font-size: 22px;
+    color: $white;
+
+    @include minWidth(small-desktop) {
+      top: 33px;
+      left: 35px;
+      font-size: 36px;
+    }
+  }
+}
+
+.squiggle {
+  height: 4px;
+}
+
+.authorContainer {
+  display: block;
+
+  @include minWidth(tablet) {
+    display: flex;
+  }
+
+}
+
+.verticalSquiggle {
+    display: none;
+
+  @include minWidth(tablet) {
+    display: block;
+    height: 4px;
+    width: 30px;
+    transform: translateY(15px) rotate(90deg);
+    float:left;
+  }
+}
+
+.heroDescriptionCredit {
+  .makeit & {
+    color: $river-bed;
+    font-size: 12px;
+    font-family: 'Averta';
+    font-style: normal;
+  }
+}

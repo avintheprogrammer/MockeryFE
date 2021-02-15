@@ -1,0 +1,1042 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Global Wrapper renders correctly 1`] = `
+<div
+  className="mockeryBrand"
+  id="BrandPageWrapper"
+>
+  <JumpLink
+    contentID="MainContent"
+    pageType="isPage"
+    text="Skip Navigation"
+  />
+  <Connect(GlobalNavigation)
+    brand="mockery"
+    data={
+      Object {
+        "collapsed": Array [
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "navigation:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "www.mockery.com",
+            "items": Array [],
+            "label": "MARKETS",
+            "name": "markets",
+            "path": "/markets/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "navigation:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "www.mockery.com",
+            "items": Array [],
+            "label": "BUSINESS NEWS",
+            "name": "business_news",
+            "path": "/us-news/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "navigation:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "www.mockery.com",
+            "items": Array [],
+            "label": "INVESTING",
+            "name": "investing",
+            "path": "/investing/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "navigation:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "www.mockery.com",
+            "items": Array [],
+            "label": "TECH",
+            "name": "tech",
+            "path": "/technology/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "navigation:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "www.mockery.com",
+            "items": Array [],
+            "label": "POLITICS",
+            "name": "politics",
+            "path": "/politics/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "navigation:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "www.mockery.com",
+            "items": Array [],
+            "label": "MOCKERY TV",
+            "name": "live_tv",
+            "path": "/live-tv/",
+          },
+        ],
+        "edition": Array [
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "",
+            "items": Array [],
+            "label": "USA",
+            "name": "us_edition",
+            "path": "javascript:void(0);",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "",
+            "items": Array [],
+            "label": "INTL",
+            "name": "international_edition",
+            "path": "javascript:void(0);",
+          },
+        ],
+        "expanded": Array [
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "www.mockery.com",
+            "items": Array [
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Pre-Markets",
+                "name": "pre_markets",
+                "path": "/pre-markets/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "U.S. Markets",
+                "name": "us_markets",
+                "path": "/us-markets/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Asia Markets",
+                "name": "asia_markets",
+                "path": "/markets-asia-pacific/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Europe Markets",
+                "name": "europe_markets",
+                "path": "/markets-europe/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Stock",
+                "name": "stock_markets",
+                "path": "/stocks/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Commodities",
+                "name": "commodities_markets",
+                "path": "/commodities/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Currencies",
+                "name": "currencies_markets",
+                "path": "/currencies/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Bonds",
+                "name": "bonds_markets",
+                "path": "/bonds/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Funds",
+                "name": "funds_markets",
+                "path": "/mutual-funds/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "ETFs",
+                "name": "etf_markets",
+                "path": "/exchange-traded-funds/",
+              },
+            ],
+            "label": "MARKETS",
+            "name": "markets",
+            "path": "/markets/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "www.mockery.com",
+            "items": Array [
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Economy",
+                "name": "economy_news",
+                "path": "/economy/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Finance",
+                "name": "finance_news",
+                "path": "/finance/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Health Care",
+                "name": "healthcare_news",
+                "path": "/health-care/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Real Estate",
+                "name": "real_estate_news",
+                "path": "/real-estate/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Energy",
+                "name": "energy_news",
+                "path": "/energy/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Transportation",
+                "name": "transportation_news",
+                "path": "/transportation/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Retail",
+                "name": "retail_news",
+                "path": "/retail/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Media",
+                "name": "media_news",
+                "path": "/media/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Wealth",
+                "name": "wealth_news",
+                "path": "/wealth/",
+              },
+            ],
+            "label": "BUSINESS NEWS",
+            "name": "business_news",
+            "path": "/us-news/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "www.mockery.com",
+            "items": Array [
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Personal Finance",
+                "name": "personal_finance_investing",
+                "path": "/personal-finance/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Financial Advisors",
+                "name": "financial_advisors_investing",
+                "path": "/financial-advisors/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Trading Nation",
+                "name": "trading_nation_investing",
+                "path": "/trading-nation/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "ETF Street",
+                "name": "etf_street",
+                "path": "/etf-street/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Buffett Watch",
+                "name": "buffett_watch_investing",
+                "path": "/buffett-watch/",
+              },
+            ],
+            "label": "INVESTING",
+            "name": "investing",
+            "path": "/investing/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+              },
+            },
+            "host": "www.mockery.com",
+            "items": Array [
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Mobile",
+                "name": "mobile_tech",
+                "path": "/mobile/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Social Media",
+                "name": "social_media_tech",
+                "path": "/social-media/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Enterprise",
+                "name": "enterprise_tech",
+                "path": "/enterprise/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Cybersecurity",
+                "name": "cybersecurity_tech",
+                "path": "/cybersecurity/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Innovation",
+                "name": "innovation",
+                "path": "/innovation/",
+              },
+            ],
+            "label": "TECH",
+            "name": "tech",
+            "path": "/technology/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+              },
+            },
+            "host": "www.mockery.com",
+            "items": Array [
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "White House",
+                "name": "white_house_politics",
+                "path": "/white-house/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Policy",
+                "name": "policy_politics",
+                "path": "/policy/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Congress",
+                "name": "congress_politics",
+                "path": "/congress/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "World Politics",
+                "name": "world_politics",
+                "path": "/world-politics/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Law",
+                "name": "law_politics",
+                "path": "/law/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Taxes",
+                "name": "taxes_politics",
+                "path": "/taxes/",
+              },
+            ],
+            "label": "POLITICS",
+            "name": "politics",
+            "path": "/politics/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+              },
+            },
+            "host": "www.mockery.com",
+            "items": Array [
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "MOCKERY TV",
+                "name": "live_tv",
+                "path": "/live-tv/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Top Video",
+                "name": "top_video",
+                "path": "/top-video/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Business Day Shows",
+                "name": "bussiness_day_shows",
+                "path": "/tv-worldwide/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Primetime Shows",
+                "name": "primetime_shows",
+                "path": "/make-it/shows/",
+              },
+              Object {
+                "attr": Object {
+                  "data": Object {
+                    "trknavattr": "navigation:\${parent}:\${label}:\${currentDocNID}",
+                  },
+                },
+                "host": "www.mockery.com",
+                "items": Array [],
+                "label": "Full Episodes",
+                "name": "full_episodes",
+                "path": "/live-tv/",
+              },
+            ],
+            "label": "MOCKERY TV",
+            "name": "live_tv",
+            "path": "/live-tv/",
+          },
+          Object {
+            "attr": Object {
+              "child": Object {
+                "data": Object {
+                  "trknavattr": "navigation:\${parent}:\${self}:\${currentDocNID}",
+                },
+              },
+              "parent": Object {
+                "data": Object {
+                  "trknavattr": "navigation:\${parent}:\${name}:\${currentDocNID}",
+                },
+              },
+            },
+            "items": Array [],
+            "name": "dynamic",
+            "source": Object {
+              "id": "104315562",
+              "name": "CAPI",
+              "path": "/list/id/",
+            },
+          },
+        ],
+        "featured": Array [
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "featured:\${parent}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "",
+            "items": Array [],
+            "label": "SIGN IN",
+            "name": "user_signin",
+            "path": "javascript:void(0);",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "featured:\${parent}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "www.mockery.com",
+            "items": Array [],
+            "label": "PRO",
+            "name": "pro_subscriber",
+            "path": "/pro/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "featured:\${parent}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "watchlist.mockery.com",
+            "items": Array [],
+            "label": "WATCHLIST",
+            "name": "watchlist",
+            "path": "/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "featured:\${parent}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "www.mockery.com",
+            "items": Array [],
+            "label": "MAKE IT",
+            "name": "makeit",
+            "path": "/makeit/",
+          },
+        ],
+      }
+    }
+    hasLiveAlert={false}
+    page=""
+    product="web"
+    region={
+      Object {
+        "defaultRegion": "USA",
+        "selectedRegion": "USA",
+      }
+    }
+    searchData={Object {}}
+    updateHasClock={[Function]}
+    url=""
+  />
+  <div
+    className="contentWrapper"
+    id="MainContent"
+  >
+    <div />
+  </div>
+  <MobileAdhesion
+    dataId="MobileAdhesion-Homepage"
+    slotMethod="cloneAd"
+  />
+  <Footer
+    brand="mockery"
+    data={
+      Object {
+        "main": Array [
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "",
+            "items": Array [],
+            "label": "About MOCKERY",
+            "name": "about_mockery",
+            "path": "/about/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "https://mockeryllca.custhelp.com",
+            "items": Array [],
+            "label": "Help",
+            "name": "help",
+            "path": "/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "https://mockeryllca.custhelp.com",
+            "items": Array [],
+            "label": "Contact",
+            "name": "contact",
+            "path": "/app/ask",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "items": Array [],
+            "name": "contact",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "",
+            "items": Array [],
+            "label": "Careers",
+            "name": "careers",
+            "path": "/mockery-careers-and-employment/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "",
+            "items": Array [],
+            "label": "Advertise With Us",
+            "name": "advertise",
+            "path": "/advertising-and-partnerships/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "",
+            "items": Array [],
+            "label": "Licensing &amp; Reprints",
+            "name": "licensing_and_reprints",
+            "path": "/mockery-reprints/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "",
+            "items": Array [],
+            "label": "Corrections",
+            "name": "corrections",
+            "path": "/corrections/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "https://corporate.comcast.com",
+            "items": Array [],
+            "label": "Independent Programming",
+            "name": "independent_programming",
+            "path": "/news-information/nbcuniversal-transaction/independent-programming",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "",
+            "items": Array [],
+            "label": "Closed Captioning",
+            "name": "closed_captioning",
+            "path": "/closed-captioning/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "https://www.nbcuni.com",
+            "items": Array [],
+            "label": "Privacy Policy",
+            "name": "privacy_policy",
+            "path": "/privacy/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "",
+            "items": Array [],
+            "label": "Terms of Service",
+            "name": "terms_of_service",
+            "path": "/nbcuniversal-terms-of-service/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "",
+            "items": Array [],
+            "label": "Get In Touch",
+            "name": "news_tips_link",
+            "path": "/news-tips/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "",
+            "items": Array [],
+            "label": "Sign Up Now",
+            "name": "newsletter_link",
+            "path": "/sign-up-for-mockery-newsletters/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "",
+            "items": Array [],
+            "label": "Subscribe to",
+            "name": "subscribe_with_icon",
+            "path": "/application/pro/?__source=pro|display|mockery|house|PRO_Footer_MktgPg",
+          },
+        ],
+        "social": Array [
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "https://www.facebook.com",
+            "items": Array [],
+            "label": "",
+            "name": "facebook",
+            "path": "/mockery/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "https://www.twitter.com",
+            "items": Array [],
+            "label": "",
+            "name": "twitter",
+            "path": "/mockery/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "https://www.linkedin.com/company",
+            "items": Array [],
+            "label": "",
+            "name": "linkedin",
+            "path": "/mockery/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "https://www.instagram.com",
+            "items": Array [],
+            "label": "",
+            "name": "instagram",
+            "path": "/mockery/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "https://www.youtube.com",
+            "items": Array [],
+            "label": "",
+            "name": "youtube",
+            "path": "/mockery/",
+          },
+          Object {
+            "attr": Object {
+              "data": Object {
+                "trknavattr": "footer:\${name}:\${name}:\${currentDocNID}",
+              },
+            },
+            "host": "",
+            "items": Array [],
+            "label": "",
+            "name": "rss",
+            "path": "/id/28295763",
+          },
+        ],
+      }
+    }
+    product="web"
+    region={
+      Object {
+        "defaultRegion": "USA",
+        "selectedRegion": "USA",
+      }
+    }
+    standalone={false}
+  />
+</div>
+`;

@@ -1,0 +1,265 @@
+@import '../../assets/stylesheets/utils/grid';
+@import '../../assets/stylesheets/utils/colors';
+@import '../../assets/stylesheets/utils/typography';
+
+.page {
+  font-family: 'Lyon';
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.pageDark {
+  composes: page;
+  background-color: $mineShaft;
+}
+
+.buffettSlideshowHeader {
+  color: $white;
+  font-family: 'Lyon';
+  font-size: 24px;
+  font-style: italic;
+  letter-spacing: 0.26px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 10px;
+
+  @include minWidth(tablet) {
+    font-size: 40px;
+    letter-spacing: 0.4px;
+    margin-bottom: 20px;
+  }
+
+  @include minWidth(small-desktop) {
+    font-size: 52px;
+    letter-spacing: 0.52px;
+    margin-bottom: 30px;
+  }
+
+  span {
+    @include fontWeight('Black');
+    color: $straw;
+    font-style: normal;
+  }
+}
+
+.buffettSlideshowHeaderDark {
+  composes: buffettSlideshowHeader;
+  color: $mineShaft;
+
+  span {
+    color: $tawny-port;
+  }
+}
+
+.buffettSlideshowComponent {
+  background-color: $less-black;
+  padding: 40px 0 20px;
+
+  @include minWidth(small-desktop) {
+    padding: 60px 0 40px;
+  }
+}
+
+.buffettSlideshowComponentDark {
+  composes: buffettSlideshowComponent;
+  background-color: $white;
+}
+
+.buffettSlideshowComponentWrapper {
+  position: relative;
+  z-index: 2;
+
+  @include minWidth(tablet) {
+    @include containerFluidWidths();
+  }
+}
+
+.buffettSlideshowComponentRecirc {
+  composes: buffettSlideshowComponent;
+
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    background-color: $spring-wood;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: 90px;
+    width: 100%;
+    z-index: 1;
+
+    @include minWidth(tablet) {
+      top: 55px;
+      height: 145px;
+    }
+
+    @include minWidth(small-desktop) {
+      top: 85px;
+      height: 198px;
+    }
+
+    @include minWidth(large-desktop) {
+      height: 260px;
+    }
+  }
+}
+
+.buffettSlideshowPackage {
+  margin-left: 20px;
+
+  @include minWidth(small-desktop) {
+    @include offset(1);
+    @include span-columns(7);
+  }
+
+  @include minWidth(large-desktop) {
+    @include offset(1);
+    @include span-columns(10);
+  }
+}
+
+.buffettSlideshowPackageBox {
+  @include minWidth(tablet) {
+    margin-left: -20px;
+  }
+
+  @include minWidth(small-desktop) {
+    margin-left: -30px;
+  }
+}
+
+.bodyWrapper {
+  @include containerFluidWidths();
+  font-size: 18px;
+  line-height: 1.77;
+
+  @include minWidth(tablet) {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+
+  ul,
+  ol,
+  h2,
+  h3,
+  p {
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    @include minWidth(tablet) {
+      margin-left: calc(100% / 12);
+      width: calc((100% / 12) * 10);
+    }
+
+    @include minWidth(small-desktop) {
+      margin-left: calc((100% / 9) * 2);
+      width: calc((100% / 9) * 5);
+    }
+
+    @include minWidth(large-desktop) {
+      margin-left: calc((100% / 12) * 3);
+      width: 50%;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h2 {
+    @include fontWeight('Black');
+    color: $mineShaft;
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+
+    @include minWidth(tablet) {
+      font-size: 22px;
+      line-height: 1.36;
+      letter-spacing: 0.2px;
+      margin-bottom: 20px;
+    }
+
+    @include minWidth(small-desktop) {
+      font-size: 34px;
+      line-height: 1.17;
+      letter-spacing: 0.32px;
+    }
+
+    @include minWidth(small-desktop) {
+      font-size: 34px;
+      line-height: 1.17;
+      letter-spacing: 0.32px;
+    }
+  }
+
+  h3 {
+    @include fontWeight('Semibold');
+    color: $mineShaft;
+    font-family: 'Proxima Nova';
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: 1.67px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    @include minWidth(tablet) {
+      margin-bottom: 15px;
+    }
+
+    @include minWidth(large-desktop) {
+      padding-top: 35px;
+    }
+  }
+
+  li {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    li {
+      &::before {
+        @include fontWeight('Black');
+        content: '\2666';
+        font-size: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: item;
+
+    li {
+      &::before {
+        @include fontWeight('Black');
+        content: counter(item) '. ';
+        color: $mineShaft;
+        counter-increment: item;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.buffettArticleEmbedWrapper {
+  margin-bottom: 40px;
+
+  @include minWidth(small-desktop) {
+    margin-left: calc(100% / 9);
+    width: calc((100% / 9) * 7);
+  }
+
+  @include minWidth(large-desktop) {
+    margin-left: calc((100% / 12) * 2);
+    width: calc((100% / 12) * 8);
+  }
+}
